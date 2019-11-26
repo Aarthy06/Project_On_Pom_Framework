@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 55.526 sec <<< FAILURE! - in TestSuite
+checkwarningmsg(com.qa.test.HomePageTest)  Time elapsed: 5.061 sec  <<< FAILURE!
+java.lang.AssertionError: 
+expected [If you want to be able to fully use the AdminModules panel and have free modules available, you should enable the following configuration on your server
+- Enable PHP's allow_url_fopen setting] but found []
+	at com.qa.test.HomePageTest.checkwarningmsg(HomePageTest.java:73)
+
+checkmrktplctitle(com.qa.test.HomePageTest)  Time elapsed: 6.035 sec  <<< FAILURE!
+java.lang.AssertionError: expected [exp] but found [Dashboard • SHOPCART]
+	at com.qa.test.HomePageTest.checkmrktplctitle(HomePageTest.java:81)
+
