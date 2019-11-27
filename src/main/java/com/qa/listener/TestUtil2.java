@@ -75,14 +75,18 @@ public class TestUtil2 extends BaseClass{
 	}
 	
 
-	 public static void takeScreenshotAtEndOfTest() throws IOException 
-	 {
-		    String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
-			File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-			String currentDir = System.getProperty("user.dir");
-			FileUtils.copyFile(scrFile, new File(currentDir + "/ErrorScreenshots/" +dateName+ System.currentTimeMillis() + ".png"));
-	  }
+	
+ public static String getscreenshot(WebDriver driver,String screenShotName) throws Throwable {
+			String datename=new SimpleDateFormat("yyyy-MM-DD").format(new Date()); 
+			TakesScreenshot s=(TakesScreenshot)driver;
+			File src=s.getScreenshotAs(OutputType.FILE);
+			String dest=System.getProperty("Users.dir")+"/Error-Screenshot/" + screenShotName+ ".png";
+			File destination=new File(dest);
+			FileUtils.copyFile(src, destination);
+			return dest;
+		}
 
+	
 
 	}
 

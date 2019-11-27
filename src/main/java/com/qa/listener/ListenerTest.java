@@ -49,13 +49,16 @@ public class ListenerTest extends BaseClass implements ITestListener
         System.out.println("Test failure" +new java.util.Date());
     	System.out.println("[__Test Failure Exception is occured__] : " + result);
 
-        try {
-			TestUtil2.takeScreenshotAtEndOfTest();
-		} catch (IOException e) {
-
+       	String screenshotPath;
+		try {
+			screenshotPath = TestUtil2.getscreenshot(driver,result.getName());
+			test.log(LogStatus.FAIL, test.addScreenCapture(screenshotPath));
+		} 
+		catch (Throwable e) {
+			
 			e.printStackTrace();
 		}
-
+	
             
     }		
 
