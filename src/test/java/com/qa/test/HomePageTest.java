@@ -15,6 +15,7 @@ import com.qa.util.ScreenShot;
 
 
 public class HomePageTest extends BaseClass{
+	System.out.println("sample line");
 	HomePage homepage;
 	loginPage Loginpage;
 	ScreenShot screenshot;
