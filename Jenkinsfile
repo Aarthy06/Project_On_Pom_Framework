@@ -12,7 +12,7 @@ node {
       // Run the maven build
       withEnv(["MVN_HOME=$mvnHome"]) {
          if (isUnix()) {
-            sh '"$MVN_HOME/bin/mvn"  package'
+            sh '"$MVN_HOME/bin/mvn" package'
          } else {
             bat(/"%MVN_HOME%\bin\mvn" package/)
          }
