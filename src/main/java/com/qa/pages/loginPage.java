@@ -15,7 +15,7 @@ public class loginPage extends BaseClass {
 		@FindBy(xpath="//*[@id=\"login_form\"]/div[3]/button")
 		public static WebElement signinbtn;
 		
-		@FindBy(xpath="//*[@id=\"shop-img\"]/img")
+		@FindBy(xpath="//*[@id=\"sho-img\"]/img")
 		public static WebElement logoimg;
 		
 		@FindBy(xpath="//*[@id=\"login_form\"]/div[1]/span")
