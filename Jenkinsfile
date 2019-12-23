@@ -33,7 +33,7 @@ node {
       mail bcc: '', body: 'This is Pipeline Email Status', cc: '', from: '', 
          replyTo: 'sonugadwe06@gmail.com', 
          subject: 'This is Pipeline Job Build Status', 
-         to: 'arthymane27@gamil.com'
+         to: 'arthymane27@gmail.com'
       
       
   
