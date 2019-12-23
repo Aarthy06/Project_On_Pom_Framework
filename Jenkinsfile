@@ -18,5 +18,27 @@ node {
          }
       }
    }
+   stage('Result Report'){
+   publishHTML(target:[allowMissing: false, 
+                       alwaysLinkToLastBuild: false, 
+                       includes: '**/*html', 
+                       keepAll: true, 
+                       reportDir: 'test-output', 
+                       reportFiles: 'ExtentReposhot.html', 
+                       reportName: 'HTML Report', 
+                       reportTitles: ''])
+   } 
+   
+   stage('Email Notification'){
+      mail bcc: '', body: '', cc: '', from: '', 
+         replyTo: 'sonugadwe06@gmail.com', 
+         subject: 'This is Pipeline Job Build Status', 
+         to: 'arthymane27@gamil.com'
+      
+      
+  
+   } 
+   
+   
    
 }
