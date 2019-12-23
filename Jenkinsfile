@@ -34,7 +34,15 @@ node {
          replyTo: 'sonugadwe06@gmail.com', 
          subject: 'This is Pipeline Job Build Status', 
          to: 'arthymane27@gmail.com'
-      
+   }
+    stage('ExtendedEmail Notification'){
+   emailext attachLog: true, 
+      attachmentsPattern: '**/*.html', 
+      body: 'To Send email thorugh Script ', 
+      compressLog: true, 
+      replyTo: 'arthymane27@gmail.com', 
+      subject: 'This is Jenkin email job status', 
+      to: 'arthymane27@gmail.com'
       
   
    } 
